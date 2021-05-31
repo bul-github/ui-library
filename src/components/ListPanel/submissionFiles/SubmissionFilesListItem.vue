@@ -264,12 +264,13 @@ export default {
 			var self = this;
 			$.ajax({
 				url: this.apiUrl + '/' + this.item.id + '?stageId=' + this.stageId,
-				type: 'PUT',
+				type: 'POST',
 				data: {
 					genreId: genreId
 				},
 				headers: {
-					'X-Csrf-Token': pkp.currentUser.csrfToken
+					'X-Csrf-Token': pkp.currentUser.csrfToken,
+					'X-Http-Method-Override': 'PUT'
 				},
 				error: this.ajaxErrorCallback,
 				success(r) {
