@@ -81,6 +81,11 @@
 					</span>
 				</template>
 			</div>
+			<field-error
+				v-for="errorCategory in item.error"
+				:key="errorCategory"
+				:messages="errorCategory"
+			/>
 		</template>
 
 		<!-- Uploads in progress not yet saved as submission files -->
@@ -272,7 +277,9 @@ export default {
 					'X-Csrf-Token': pkp.currentUser.csrfToken,
 					'X-Http-Method-Override': 'PUT'
 				},
-				error: this.ajaxErrorCallback,
+				error(r) {
+					self.item['error'] = r.responseJSON;
+				},
 				success(r) {
 					self.status = self.__('form.saved');
 					setTimeout(() => {
