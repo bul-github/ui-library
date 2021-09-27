@@ -2,8 +2,6 @@ export default {
 	name: 'description',
 	component: 'field-rich-textarea',
 	label: 'Journal Description',
-	insertPreparedContentLabel: 'Insert',
-	skinUrl: '/styles/tinymce',
 	value: '',
 	plugins: 'paste,link,lists,image,code',
 	toolbar:

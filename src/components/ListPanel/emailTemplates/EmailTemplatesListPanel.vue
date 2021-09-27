@@ -366,10 +366,7 @@ export default {
 			}
 
 			activeForm.fields = activeForm.fields.map(field => {
-				if (
-					Object.keys(emailTemplate).includes(field.name) &&
-					field.name !== 'description'
-				) {
+				if (Object.keys(emailTemplate).includes(field.name)) {
 					field.value = emailTemplate[field.name];
 				}
 				return field;

@@ -222,7 +222,6 @@ export default {
 						'assignedTo',
 						'issueIds',
 						'sectionIds',
-						'categoryIds',
 						'assignedTo'
 					].includes(param)
 				) {
@@ -271,7 +270,6 @@ export default {
 					'daysInactive',
 					'issueIds',
 					'sectionIds',
-					'categoryIds',
 					'assignedTo'
 				].includes(param)
 			) {

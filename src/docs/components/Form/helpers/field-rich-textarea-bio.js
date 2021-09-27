@@ -2,8 +2,6 @@ export default {
 	name: 'bio',
 	component: 'field-rich-textarea',
 	label: 'Bio Statement',
-	insertPreparedContentLabel: 'Insert',
-	skinUrl: '/styles/tinymce',
 	groupId: 'profile',
 	plugins: 'paste,link,noneditable',
 	toolbar: 'bold italic superscript subscript | link',
